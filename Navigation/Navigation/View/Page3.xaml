@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"  
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"  
+             x:Class="Navigation.View.Page3">
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid Margin="20,35,20,20"
+                  Padding="16">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.33*" />
+                    <ColumnDefinition Width="0.33*" />
+                    <ColumnDefinition Width="0.33*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                </Grid.RowDefinitions>
+                <Button Grid.Column="1"
+                    Grid.Row="1"
+                    x:Name="btnAllow"
+                    Text="Info" 
+                    />
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>  
+      

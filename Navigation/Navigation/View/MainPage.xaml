@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"  
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"  
+             xmlns:view="clr-namespace:Navigation.View;assembly=Navigation"
+             x:Class="Navigation.View.MainPage"
+             Title="Navigation Sample">
+    <StackLayout>
+        <Grid Margin="20,35,20,20">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.33*" />
+                <ColumnDefinition Width="0.33*" />
+                <ColumnDefinition Width="0.33*" />
+            </Grid.ColumnDefinitions>
+            <Button
+                    BackgroundColor="Red"
+                    Text="Swipe Prototype" 
+                    TextColor="Yellow"
+                    Command="{Binding NavigateCommand}" CommandParameter="{x:Type view:Page1}"
+                />
+            <Button Grid.Column="1"
+                    BackgroundColor="Orange"
+                    Text="Button Prototype" 
+                    TextColor="Black"
+                    Command="{Binding NavigateCommand}" CommandParameter="{x:Type view:Page2}"
+                    />
+            <Button Grid.Column="2"
+                    BackgroundColor="DeepPink"
+                    Text="Fingerprint Prototype" 
+                    TextColor="LightPink"
+                    Command="{Binding NavigateCommand}" CommandParameter="{x:Type view:Page3}"
+                    />
+        </Grid>
+    </StackLayout>
+</ContentPage> 
