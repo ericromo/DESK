@@ -6,9 +6,12 @@
     <ContentPage.Content>
         <StackLayout Padding="10">
             <swipeCardView:SwipeCardView 
+                x:Name="SwipeCardView"
                 ItemsSource="{Binding CardItems}"
                 SwipedCommand="{Binding SwipedCommand}"
-                VerticalOptions="FillAndExpand">
+                VerticalOptions="FillAndExpand"
+                      SupportedSwipeDirections="Left, Right, Up"
+                SupportedDraggingDirections="Left, Right, Up, Down">
                 <swipeCardView:SwipeCardView.ItemTemplate>
                     <DataTemplate>
                         <Label Text="{Binding .}" FontSize="Large" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" BackgroundColor="Beige"/>
@@ -16,6 +19,8 @@
                 </swipeCardView:SwipeCardView.ItemTemplate>
             </swipeCardView:SwipeCardView>
             <Label Text="{Binding Message}" HorizontalOptions="CenterAndExpand" />
+            
+            
             <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Padding="10, 10, 10, 20" Spacing="30">
                 <StackLayout>
                     <Button x:Name="rejectButton" Image="reject.png" Clicked="OnDislikeClicked" WidthRequest="60" HeightRequest="60" CornerRadius="30" BackgroundColor="White" Scale="1"></Button>
@@ -30,6 +35,7 @@
             
             <Button Text="Clear Items" Command="{Binding ClearItemsCommand}"></Button>
             <Button Text="Add 10 Items" Command="{Binding AddItemsCommand}"></Button>
+            
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>  

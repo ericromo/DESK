@@ -18,16 +18,19 @@ namespace Navigation.View
 
         private void OnDislikeClicked(object sender, EventArgs e)
         {
+            this.SwipeCardView.InvokeSwipe(SwipeCardDirection.Left);
 
         }
 
         private void OnSuperLikeClicked(object sender, EventArgs e)
         {
+            this.SwipeCardView.InvokeSwipe(SwipeCardDirection.Up);
 
         }
 
         private void OnLikeClicked(object sender, EventArgs e)
         {
+            this.SwipeCardView.InvokeSwipe(SwipeCardDirection.Right);
 
         }
     }
