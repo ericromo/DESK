@@ -9,7 +9,7 @@
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="0.33*" />
                 <ColumnDefinition Width="0.33*" />
-                <ColumnDefinition Width="0.33*" />
+                <ColumnDefinition Width="0.33*" /> 
             </Grid.ColumnDefinitions>
             <Button
                     BackgroundColor="Red"

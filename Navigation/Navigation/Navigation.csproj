@@ -12,11 +12,12 @@
   <ItemGroup>
     <PackageReference Include="LiveXAML" Version="2.1.73" />
     <PackageReference Include="MLToolkit.Forms.SwipeCardView" Version="2.0.0" />
+    <PackageReference Include="NLua" Version="1.4.24" />
     <PackageReference Include="Plugin.Fingerprint" Version="1.4.9" />
     <PackageReference Include="Xamarin.Forms" Version="4.3.0.851321-pre3" />
     <PackageReference Include="Xamarin.Essentials" Version="1.3.1" />
     <PackageReference Include="XamarinForms.CardView" Version="1.1.1.5" />
-  </ItemGroup>
+  </ItemGroup> 
 
   <ItemGroup>
     <EmbeddedResource Update="View\Page1.xaml">
