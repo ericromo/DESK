@@ -18,6 +18,12 @@ namespace Navigation.View
             btnBlue.Clicked += BtnBlue_Clicked;
             btnGreen.Clicked += BtnGreen_Clicked1;
             btnRed.Clicked += BtnRed_Clicked;
+            btnAlmond.Clicked += BtnAlmond_Clicked;
+        }
+
+        private void BtnAlmond_Clicked(object sender, EventArgs e)
+        {
+            // Enter code here
         }
 
         private async void BtnRed_Clicked(object sender, EventArgs e)

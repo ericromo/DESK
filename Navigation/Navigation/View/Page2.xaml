@@ -11,14 +11,14 @@
                 <ColumnDefinition Width="0.33*" />
                 <ColumnDefinition Width="0.33*" />
             </Grid.ColumnDefinitions>
-            <Button
+                <Button
                     BackgroundColor="Red"
                     x:Name="btnRed"
                     Text="Red Button" 
                     TextColor="White"
                     
                 />
-            <Button Grid.Column="1"
+                <Button Grid.Column="1"
                     BackgroundColor="Blue"
                     x:Name="btnBlue"
                     Text="Blue Button" 
@@ -31,7 +31,14 @@
                     Text="Green Button" 
                     TextColor="White"
                     />
+         
         </Grid>
+            <Button 
+                    BackgroundColor="BlanchedAlmond"
+                    x:Name="btnAlmond"
+                    Text="ALMOND" 
+                    TextColor="OrangeRed"
+                    />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage> 
