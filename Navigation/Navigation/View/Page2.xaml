@@ -39,6 +39,17 @@
                     Text="ALMOND" 
                     TextColor="OrangeRed"
                     />
+
+            <Editor Placeholder="Enter text here" 
+                PlaceholderColor="Olive"
+                IsReadOnly="true" 
+                x:Name="editTest"
+                AutoSize="TextChanges"
+                BackgroundColor="DarkGoldenrod"
+                    />
+            
+            
+         
         </StackLayout>
     </ContentPage.Content>
 </ContentPage> 

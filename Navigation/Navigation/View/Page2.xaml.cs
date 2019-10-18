@@ -19,16 +19,21 @@ namespace Navigation.View
             btnGreen.Clicked += BtnGreen_Clicked1;
             btnRed.Clicked += BtnRed_Clicked;
             btnAlmond.Clicked += BtnAlmond_Clicked;
+            
         }
 
         private void BtnAlmond_Clicked(object sender, EventArgs e)
         {
-            // Enter code here
+            editTest.Text = "Hello\nGoodbye\nHello";
+            editTest.BackgroundColor = Xamarin.Forms.Color.LemonChiffon;
         }
 
         private async void BtnRed_Clicked(object sender, EventArgs e)
         {
-            await DisplayAlert("Red", "You've clicked the red button", "OK");
+            editTest.Text = "You have clicked the red button\nCongratulations Eric Romo.\n" +
+                "You have won a billion dollars, but you cannot claim it until you finish this project";
+            editTest.BackgroundColor = Xamarin.Forms.Color.Crimson;
+
         }
 
         private async void BtnBlue_Clicked(object sender, EventArgs e)
