@@ -13,17 +13,22 @@
             </Grid.ColumnDefinitions>
             <Button
                     BackgroundColor="Red"
-                    Text="Reject" 
+                    x:Name="btnRed"
+                    Text="Red Button" 
                     TextColor="White"
+                    
                 />
             <Button Grid.Column="1"
                     BackgroundColor="Blue"
-                    Text="Info" 
+                    x:Name="btnBlue"
+                    Text="Blue Button" 
                     TextColor="White"
                     />
+                    
             <Button Grid.Column="2"
                     BackgroundColor="Green"
-                    Text="Allow" 
+                    x:Name="btnGreen"
+                    Text="Green Button" 
                     TextColor="White"
                     />
         </Grid>
