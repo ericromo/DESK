@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 using Navigation.ViewModel;
+using Plugin.Fingerprint;
 
 namespace Navigation.View
 {
@@ -12,23 +13,20 @@ namespace Navigation.View
     {
         public MainPage()
         {
-            InitializeComponent();
+            fingerprint();
             this.BindingContext = new MainPageViewModel(this.Navigation);
         }
-
-        //private async void Button_Clicked(object sender, EventArgs e)
-        //{
-        //    await Navigation.PushAsync(new Page1());
-        //}
-
-        //private async void Button_Clicked_1(object sender, EventArgs e)
-        //{
-        //    await Navigation.PushAsync(new Page2());
-        //}
-
-        //private async void Button_Clicked_2(object sender, EventArgs e)
-        //{
-        //    await Navigation.PushAsync(new Page3());
-        //}
+        private async void fingerprint()
+        {
+            bool result = await CrossFingerprint.Current.IsAvailableAsync(true);
+            if (result)
+            {
+                var auth = await CrossFingerprint.Current.AuthenticateAsync("Authenticate");
+                if (auth.Authenticated)
+                    InitializeComponent();
+                else
+                    await DisplayAlert("Failed", "Fingerprint authentication failed, please try again.", "OK");
+            }
+        }
     }
 }
