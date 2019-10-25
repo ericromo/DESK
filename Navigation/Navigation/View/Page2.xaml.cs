@@ -28,7 +28,7 @@ namespace Navigation.View
             editTest.BackgroundColor = Xamarin.Forms.Color.LemonChiffon;
         }
 
-        private async void BtnRed_Clicked(object sender, EventArgs e)
+        private void BtnRed_Clicked(object sender, EventArgs e)
         {
             editTest.Text = "You have clicked the red button\nCongratulations Eric Romo.\n" +
                 "You have won a billion dollars, but you cannot claim it until you finish this project";

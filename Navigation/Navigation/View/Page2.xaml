@@ -4,52 +4,51 @@
              xmlns:view="clr-namespace:Navigation.View;assembly=Navigation"
              x:Class="Navigation.View.Page2">
     <ContentPage.Content>
-        <StackLayout>
-            <Grid Margin="20,35,20,20">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="0.33*" />
-                <ColumnDefinition Width="0.33*" />
-                <ColumnDefinition Width="0.33*" />
-            </Grid.ColumnDefinitions>
-                <Button
+        <ScrollView>
+            <StackLayout>
+                <Grid Margin="20,35,20,20">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0.33*" />
+                        <ColumnDefinition Width="0.33*" />
+                        <ColumnDefinition Width="0.33*" />
+                    </Grid.ColumnDefinitions>
+                    <Button
                     BackgroundColor="Red"
                     x:Name="btnRed"
                     Text="Red Button" 
                     TextColor="White"
                     
                 />
-                <Button Grid.Column="1"
+                    <Button Grid.Column="1"
                     BackgroundColor="Blue"
                     x:Name="btnBlue"
                     Text="Blue Button" 
                     TextColor="White"
                     />
-                    
-            <Button Grid.Column="2"
+
+                    <Button Grid.Column="2"
                     BackgroundColor="Green"
                     x:Name="btnGreen"
                     Text="Green Button" 
                     TextColor="White"
                     />
-         
-        </Grid>
-            <Button 
+
+                </Grid>
+                <Button 
                     BackgroundColor="BlanchedAlmond"
                     x:Name="btnAlmond"
                     Text="ALMOND" 
                     TextColor="OrangeRed"
                     />
 
-            <Editor Placeholder="Enter text here" 
+                <Editor Placeholder="Enter text here" 
                 PlaceholderColor="Olive"
                 IsReadOnly="true" 
                 x:Name="editTest"
                 AutoSize="TextChanges"
                 BackgroundColor="DarkGoldenrod"
                     />
-            
-            
-         
-        </StackLayout>
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage> 
