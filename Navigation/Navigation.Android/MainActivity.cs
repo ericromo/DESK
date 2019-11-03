@@ -8,6 +8,10 @@ using Android.Widget;
 using Android.OS;
 using Plugin.CurrentActivity;
 using Plugin.Fingerprint;
+//using MySql.Data.MySqlClient;
+using System.Collections;
+using System.Timers;
+using System.IO;
 
 namespace Navigation.Droid
 {
@@ -35,6 +39,12 @@ namespace Navigation.Droid
             App.ScreenHeight = (height - 0.5f) / density;
 
             LoadApplication(new App());
+
+
+
+
+
         }
+
     }
 }
