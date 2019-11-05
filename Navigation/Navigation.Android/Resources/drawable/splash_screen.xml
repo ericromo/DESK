@@ -5,8 +5,9 @@
   </item>
   <item>
     <bitmap
-        android:src="@drawable/Pooh"
+        android:src="@drawable/deskLogo"
         android:tileMode="disabled"
-        android:gravity="center"/>
+        android:gravity="fill"
+        />
   </item>
 </layer-list>

@@ -10,6 +10,7 @@ using System.Diagnostics;
 using System.Timers;
 using System.Net;
 using System.Net.Http;
+using Navigation.Interfaces;
 
 namespace Navigation.View
 {
@@ -38,7 +39,12 @@ namespace Navigation.View
                 if (auth.Authenticated)
                     InitializeComponent();
                 else
+                {
                     await DisplayAlert("Failed", "Fingerprint authentication failed, please try again.", "OK");
+                    var closer = DependencyService.Get<ICloseApplication>();
+                    closer?.closeApplication();
+                    
+                }
             }
         }
 

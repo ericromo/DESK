@@ -12,9 +12,11 @@ using Plugin.Fingerprint;
 using System.Collections;
 using System.Timers;
 using System.IO;
+using Navigation.Interfaces;
 
 namespace Navigation.Droid
 {
+
     [Activity(Label = "Navigation", Icon = "@mipmap/icon", Theme = "@style/MainTheme", ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {
@@ -46,5 +48,12 @@ namespace Navigation.Droid
 
         }
 
+        public class CloseApplication : ICloseApplication
+        {
+            public void closeApplication()
+            {
+                Android.OS.Process.KillProcess(Android.OS.Process.MyPid());
+            }
+        }
     }
 }
