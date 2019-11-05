@@ -11,6 +11,7 @@ using System.Net.Http;
 using System.Collections;
 using System.Diagnostics;
 using System.Timers;
+using Navigation.ViewModel;
 
 namespace Navigation.View
 {
@@ -21,9 +22,12 @@ namespace Navigation.View
         private string ipWildcard = "192.168.68.*";
         private int i = 0;
         private int temp = 0;
+        private string tempDevices = "";
+        private string devices = "";
         private string use = "";
         private string[] arrS = new string[255];
         public ipMAC[] arrCopy = new ipMAC[255];
+        private bool flag = true;
 
         public Page2()
         {
@@ -38,17 +42,24 @@ namespace Navigation.View
 
         private async void BtnAlmond_Clicked(object sender, EventArgs e)
         {
-            editTest.Text = string.Join("\n\n", arrS.Where(s => !string.IsNullOrEmpty(s)));
-            editTest.BackgroundColor = Xamarin.Forms.Color.BlanchedAlmond;
 
-            
+            editTest.Text = tempDevices;
+            editTest.BackgroundColor = Xamarin.Forms.Color.BlanchedAlmond;
+            myDevice.Text = tempDevices;
+
+
         }
 
         private async void BtnRed_Clicked(object sender, EventArgs e)
         {
-            editTest.Text = "You have clicked the red button\nCongratulations Eric Romo.\n" +
-                "You have won a billion dollars, but you cannot claim it until you finish this project";
-            editTest.BackgroundColor = Xamarin.Forms.Color.Crimson;
+            //editTest.Text = "You have clicked the red button\nCongratulations Eric Romo.\n" +
+            //    "You have won a billion dollars, but you cannot claim it until you finish this project";
+            //editTest.BackgroundColor = Xamarin.Forms.Color.Crimson;
+
+            //bool answer = await DisplayAlert("Alert", "New device detected", "Accept", "Deny");
+            //Debug.WriteLine("Answer: " + answer);
+
+            await DisplayActionSheet("New device conncted:", "Ignore", null, "Accept", "Deny");
 
         }
 
@@ -118,6 +129,14 @@ namespace Navigation.View
                     temp++;
                 }
                 temp = 0;
+
+                // TODO
+                // Compare arr[temp] with the list of devices located on DB. Grab each devices from DB and search for it on the device
+                // if not found, prompt the app
+                // if found, do nothing
+
+
+
                 while (arr[temp].IP != "0.0.0.0")
                 {
                     arrS[temp] = "Device # " + (temp + 1) + "\n" +
@@ -126,18 +145,11 @@ namespace Navigation.View
 
                     temp++;
                 }
+                tempDevices = string.Join("\n\n", arrS.Where(s => !string.IsNullOrEmpty(s)));
 
-                //Trigger event to print
-                BtnAlmond_Clicked(null, EventArgs.Empty);
-
-
+                // Clearing string array
+                Array.Clear(arrS, 0, arrS.Length);
             }
-
-            
-            
-            // Clearing string array
-            //Array.Clear(arrS, 0, arrS.Length);
-
 
         }
 
@@ -166,6 +178,7 @@ namespace Navigation.View
             stopTimer();
             Debug.WriteLine("Leaving the button page!");
         }
+
     }
 
 }

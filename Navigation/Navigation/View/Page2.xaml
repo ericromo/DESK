@@ -48,6 +48,8 @@
                 AutoSize="TextChanges"
                 BackgroundColor="DarkGoldenrod"
                     />
+
+                <Label x:Name ="myDevice"></Label>
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>
